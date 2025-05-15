@@ -32,8 +32,6 @@ This section is intended for developers who need to understand, run, and maintai
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/QR-Code-Generator.git
-cd QR-Code-Generator
-# QR-Code-Generator
 ```
 #### 2. Install dependencies
 ```
