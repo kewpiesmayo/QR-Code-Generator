@@ -26,6 +26,32 @@ Please see below for full technical documentation to help future developers cont
 
 This section is intended for developers who need to understand, run, and maintain the system.
 
+### APIs Used
+| API                   | Purpose                                                                                         |
+| --------------------- | ----------------------------------------------------------------------------------------------- |
+| `QRCode Monkey API` | Generates fully customized QR codes via POST requests with a JSON config                        |
+| `Supabase REST API` | Stores and retrieves user accounts and QR configurations via SQL queries                        |
+
+
+### JavaScript Libraries Used
+| Library     | Description                                                                      |
+| ----------- | -------------------------------------------------------------------------------- |
+| `Pickr`   | JavaScript color picker for selecting body, background, eye, and gradient colors |
+| `Select2` | Enhances `<select>` dropdowns with image support and better UI interactions      |
+| `jQuery*`  | Required by Select2; also used for DOM manipulation and value retrieval          |
+
+
+### NPM Packages Used
+| Package       | Type           | Description                                                             |
+| ------------- | -------------- | ----------------------------------------------------------------------- |
+| `express`     | Dependency     | Web server framework for handling routes and serving content            |
+| `cors`        | Dependency     | Enables Cross-Origin Resource Sharing so frontend can call backend APIs |
+| `dotenv`      | Dependency     | Loads environment variables from `.env` into `process.env`              |
+| `body-parser` | Dependency     | Middleware to parse incoming request bodies (JSON, URL-encoded)         |
+| `pg`          | Dependency     | PostgreSQL client used to connect to Supabase backend                   |
+| `nodemon`     | Dev Dependency | Automatically restarts server on file changes during development        |
+
+
 ### ⚙️ Installation Instructions
 
 #### 1. Clone the repository:
@@ -116,8 +142,7 @@ Create a `.env` file in your project root with the following variables:
 SUPABASE_URL=your-supabase-url
 SUPABASE_KEY=your-public-anon-key
 ```
-⚠️ Do not commit your actual .env file — include a .env.example in your repo instead.
-Find your supabase URL and key in the API settings of your supabase project.
+⚠️ Do not commit your actual .env file in your cloned repository.
 
 ---
 
