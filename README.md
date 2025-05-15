@@ -46,23 +46,15 @@ SUPABASE_KEY=your_supabase_anon_key
 
 ---
 
-### 🚀 **Running the Application**
-
-```markdown
 ## 🚀 Running the Application
 
 Start the Express server:
-
-```bash
+```
 npm start
-
+```
 ---
-
-### 📁 **Project Structure**
-
-```markdown
 ## 📁 Project Structure
-
+```
 QR-Code-Generator/
 ├── public/
 │ ├── index.html
@@ -81,3 +73,54 @@ QR-Code-Generator/
 ├── .env.example # Template for .env
 ├── package.json
 └── README.md
+```
+
+## 📡 API Documentation
+
+The following RESTful endpoints are defined in `index.js`:
+
+### `POST /signup`
+Registers a new user.  
+**Body:** `{ first_name, last_name, username, password }`
+
+### `POST /login`
+Authenticates a user.  
+**Body:** `{ username, password }`
+
+### `POST /logout`
+Logs the user out of the current session.
+
+### `GET /session`
+Returns the logged-in user's session info.
+
+### `POST /save-config`
+Saves a QR config tied to the current user.
+
+### `GET /configs/:userId`
+Retrieves all saved configs for a user.
+
+### `PUT /edit-config/:configId`
+Renames a saved config.
+
+### `DELETE /delete-config/:configId`
+Deletes a specific config.
+
+## 🧪 Testing
+
+- Currently, there are **no automated tests**
+- Manual testing has been done via browser and Postman
+
+## 🐞 Known Issues
+
+- No password encryption — data stored as plain text
+- Configs are saved but not associated with a rendered QR image
+
+## 📈 Future Enhancements
+
+- Add password hashing and authentication security
+- Implement Supabase Auth with UUID user management and RLS
+- Save and render QR image previews
+- Improve mobile UI layout
+- Add unit tests and integration tests (e.g. Jest or Mocha)
+- Support config sharing via public links
+- Add drag-and-drop or image preview UI for logos
