@@ -40,6 +40,11 @@ npm install
 #### 3. Setup Supabase Tables
 You need to set up two tables in your Supabase project: users and configs.
 
+##### Row-Level Security (RLS)
+For the current iteration, Row-Level Security (RLS) should be disabled on all Supabase tables:
+⚠️ This setup is not secure for production environments.
+
+
 ```users``` Table
 | Column Name | Type      | Default        | Description                                   |
 | ----------- | --------- | -------------- | --------------------------------------------- |
